@@ -24,12 +24,12 @@ Route::get('/', function () {
 
 Route::get('/todo', function () {
     $data = [
-        'title' => "Hello world! ",
+        'title' => "Pagina delle cose da fare oggi",
         'todo' => [
             "Compra il pane",
             "Vendi il gatto",
             "Adotta un cane"
         ]
     ];
-    return view('thingtodo',$data);
+    return view('thingstodo',$data);
 })->name("todolist");
