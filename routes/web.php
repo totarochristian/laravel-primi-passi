@@ -21,3 +21,15 @@ Route::get('/', function () {
     ];
     return view('helloworld',$data);
 })->name("helloworld");
+
+Route::get('/todo', function () {
+    $data = [
+        'title' => "Hello world! ",
+        'todo' => [
+            "Compra il pane",
+            "Vendi il gatto",
+            "Adotta un cane"
+        ]
+    ];
+    return view('thingtodo',$data);
+})->name("todolist");
