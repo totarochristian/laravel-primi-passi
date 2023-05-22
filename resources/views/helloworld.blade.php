@@ -18,11 +18,19 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
+            .container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
         </style>
     </head>
     <body>
         <div class="container">
-            <h1>Hello world!</h1>
+            <h1>{{ $title }}</h1>
+            <h2>Benvenuto {{ $username }}!</h2>
+            <p>{{ $description }}</p>
         </div>
     </body>
 </html>
