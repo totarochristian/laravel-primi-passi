@@ -29,6 +29,17 @@
     <body>
         <div class="container">
             <h1>{{ $title }}</h1>
+            <h3>
+            @if (count($todo)>0)
+                <ul>
+                    @foreach ($todo as $temp)
+                        <li>{{ $temp }}</li>
+                    @endforeach
+                </ul>
+            @else
+                <strong>Oggi giornata libera!!</strong>
+            @endif
+            </h3>
         </div>
     </body>
 </html>
