@@ -24,9 +24,21 @@
                 justify-content: center;
                 align-items: center;
             }
+            #headerMenu{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                padding: 1rem;
+            }
+            #headerMenu>a:hover,#headerMenu>.activePage{ font-weight: bold; }
         </style>
     </head>
     <body>
+        <div id="headerMenu">
+            <a href="{{ route("helloworld") }}">Hello</a>
+            <a href="{{ route("todolist") }}" class="activePage">To-do list</a>
+        </div>
         <div class="container">
             <h1>{{ $title }}</h1>
             <h3>
