@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('helloworld');
+    $data = [
+        'title' => "Hello world! ",
+        'username' => "Christian Totaro",
+        'description' => "Questo è un esempio di una pagina di benvenuto"
+    ];
+    return view('helloworld',$data);
 })->name("helloworld");
